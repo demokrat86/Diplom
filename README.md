@@ -15,20 +15,10 @@
 Команды
 Запустить тесты
 
-pytest tests --alluredir=allure_results
+python -m pytest tests --alluredir=allure_results
 Посмотреть веб отчет
 
 allure serve allure_results
 Посмотреть степень покрытия
 
 pytest --cov   
-
-### Запуск автотестов
-
-**Установка зависимостей**
-
-> $ pip install -r requirements.txt
-
-**Запуск автотестов и создание HTML-отчета о покрытии**
-
->  `$ pytest --cov=praktikum --cov-report=html`

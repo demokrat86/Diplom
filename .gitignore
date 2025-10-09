@@ -231,3 +231,18 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+# Игнорируем виртуальное окружение
+venv/
+
+# Игнорируем папки с отчетами о покрытии
+htmlcov/
+
+# Дополнительные рекомендации по игнорированию
+__pycache__/
+*.py[oc]
+*.egg-info
+build/
+dist/
+.DS_Store
+.vscode/
+.idea/
