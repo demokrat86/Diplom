@@ -20,8 +20,7 @@ class TestDatabase:
 
     @allure.title("Тест получения доступных булочек")
     def test_available_buns(self, data_base):
-        available_buns = data_base.available_buns()
-        assert len(available_buns) == 3
+        assert len(data_base.available_buns()) == 3
 
     @allure.title("Тест на добавление соуса в список ингредиентов")
     def test_available_ingredients_sauce(self, data_base):
