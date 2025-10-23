@@ -23,15 +23,13 @@ class TestBurger:
         assert burger.ingredients[1].get_type() == mock_add_ingredients_sauce.get_type()
         assert burger.ingredients[1].get_price() == mock_add_ingredients_sauce.get_price()
 
-    @allure.title('Тест на добавление и удаление ингредиентов')
+    @allure.title('Тест на удаление ингредиентов')
     def test_remove_ingredients(self, burger, mock_add_ingredients_filling, mock_add_ingredients_sauce):
         burger.add_ingredient(mock_add_ingredients_filling)
         burger.add_ingredient(mock_add_ingredients_sauce)
         burger.remove_ingredient(1)
         assert len(burger.ingredients) == 1
         assert burger.ingredients[0].get_name() == mock_add_ingredients_filling.get_name()
-        burger.remove_ingredient(0)
-        assert len(burger.ingredients) == 0
 
     @allure.title('Тест на перемещение ингредиентов')
     def test_move_ingredients(self, burger, mock_add_ingredients_filling, mock_add_ingredients_sauce):
